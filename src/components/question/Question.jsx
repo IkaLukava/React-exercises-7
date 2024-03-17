@@ -1,6 +1,6 @@
 import React from "react";
 
-const Question = ({ result, index, question, Option1, Option2, Option3, checkAns, next, score, data, reset }) => {
+const Question = ({ result, index, question, Option1, Option2, Option3, checkAns, next, score, questions, reset }) => {
   if (!question) {
     return <div></div>; 
   }
@@ -45,14 +45,14 @@ const Question = ({ result, index, question, Option1, Option2, Option3, checkAns
           </ul>
           <button onClick={next}>შემდეგი</button>
           <div className="index">
-            {index + 1} of {data.length} questions
+            {index + 1} of {questions.length} questions
           </div>
         </>
       )}
       {result ? (
         <>
           <h2>
-            შენ მოიპოვე {score} ქულა, {data.length}-დან. მალადეც!
+            შენ მოიპოვე {score} ქულა, {questions.length}-დან. მალადეც!
           </h2>
           <button onClick={reset}>თავიდან</button>
         </>
