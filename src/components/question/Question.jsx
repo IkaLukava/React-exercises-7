@@ -1,8 +1,20 @@
 import React from "react";
 
-const Question = ({ result, index, question, Option1, Option2, Option3, checkAns, next, score, questions, reset }) => {
+const Question = ({
+  result,
+  index,
+  question,
+  Option1,
+  Option2,
+  Option3,
+  checkAns,
+  next,
+  score,
+  questions,
+  reset,
+}) => {
   if (!question) {
-    return <div></div>; 
+    return <div></div>;
   }
 
   return (
